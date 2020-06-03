@@ -24,7 +24,6 @@ function RenderDish({ dish }) {
 }
 
 function RenderComments({ comments }) {
-  console.log(comments);
   if (comments != null) {
     let options = { year: 'numeric', month: 'short', day: 'numeric' };
 

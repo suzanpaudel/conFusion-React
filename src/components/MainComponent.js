@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Header from './HeaderComponent';
+import About from './AboutComponent';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
 import DishdetailComponent from './DishdetailComponent';
@@ -58,6 +59,10 @@ class MainComponent extends Component {
             path='/menu'
             component={() => <Menu dishes={this.state.dishes} />}
           ></Route>
+          <Route
+            path='/aboutus'
+            component={() => <About leaders={this.state.leaders} />}
+          />
           <Route path='/menu/:dishId' component={DishWithId} />
           <Route exact path='/contactus' component={Contact}></Route>
           <Redirect to='/home' />
@@ -69,16 +74,3 @@ class MainComponent extends Component {
 }
 
 export default MainComponent;
-
-/* <Menu
-          dishes={this.state.dishes}
-          onClick={(dishId) => this.onDishSelect(dishId)}
-        /> */
-
-/* <DishdetailComponent
-dish={
-  this.state.dishes.filter(
-    (dish) => dish.id === this.state.selectedDish
-  )[0]
-}
-/> */
